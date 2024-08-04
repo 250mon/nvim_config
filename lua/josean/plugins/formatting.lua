@@ -13,6 +13,7 @@ return {
         svelte = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
+        htmldjango = { "djlint" },
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
