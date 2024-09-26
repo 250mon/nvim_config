@@ -1,0 +1,17 @@
+<div class="input-group mb-3">
+    <span class="input-group-text"></span>
+    <select type="number"
+            class="form-select"
+            id="dosutype-select"
+            name="dosutype_id"
+            required>
+        {% for dosutype in dosutypes %}
+            <option value={{ dosutype.id }}>{{ dosutype.name }}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text">{{ form.room.label }}</span>
+    {{ form.room(class="form-select") }}
+</div>
