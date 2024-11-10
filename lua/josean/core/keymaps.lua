@@ -35,8 +35,6 @@ vim.keymap.set("n", "<leader>html", "<cmd>-1read " .. config_dir .. "/keymap_con
 vim.keymap.set("n", "<leader>flk", "<cmd>-1read " .. config_dir .. "/.flask_skeleton.html<CR>/<!--<CR>")
 vim.keymap.set("n", "<leader>flkr", "<cmd>-1read " .. config_dir .. "/.flask_radio.html<CR>/available<CR>")
 vim.keymap.set("n", "<leader>flks", "<cmd>-1read " .. config_dir .. "/.flask_select.html<CR>/available<CR>")
-vim.keymap.set("n", "<leader>gpt", "<cmd>%s/```\\n\\(\\w\\+\\)\\n\\s*\\n\\s*Copy code\\n/```\\1/g<CR>")
-vim.keymap.set("n", "<leader>gptkr", "<cmd>%s/```\\n*\\(\\w\\+\\)\\n*\\s*\\n*\\s*코드 복사\\n*/```\\1\\r/g<CR>")
 vim.keymap.set("n", "<leader>ai", "<cmd>%s/```\\n\\(\\w\\+\\)\\n.*/```\\1/g<CR>")
 
 -- [[ Basic Autocommands ]]
