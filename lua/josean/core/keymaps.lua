@@ -30,12 +30,14 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagn
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- [[ SJY Keymaps ]]
+vim.keymap.set("n", "<leader>rv", ":luafile $MYVIMRC<CR>", { silent = true })
+
 local config_dir = vim.fn.stdpath("config")
 vim.keymap.set("n", "<leader>html", "<cmd>-1read " .. config_dir .. "/keymap_contents/.skeleton.html<CR>/demo<CR>")
 vim.keymap.set("n", "<leader>flk", "<cmd>-1read " .. config_dir .. "/.flask_skeleton.html<CR>/<!--<CR>")
 vim.keymap.set("n", "<leader>flkr", "<cmd>-1read " .. config_dir .. "/.flask_radio.html<CR>/available<CR>")
 vim.keymap.set("n", "<leader>flks", "<cmd>-1read " .. config_dir .. "/.flask_select.html<CR>/available<CR>")
-vim.keymap.set("n", "<leader>ai", "<cmd>%s/```\\n\\(\\w\\+\\)\\n.*/```\\1/g<CR>")
+vim.keymap.set("n", "<leader>ai", "<cmd>%s/```\\n\\s*\\(\\w\\+\\)\\n\\s*\\n.*/```\\1/g<CR>")
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

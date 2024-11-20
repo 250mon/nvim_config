@@ -24,10 +24,22 @@ return {
       },
     })
 
+    -- typescript languge server names different in different oses
+    -- Detect the operating system
+    local uname = vim.loop.os_uname()
+    local os_name = uname.sysname
+    local tsserver = "tsserver"
+
+    if os_name == "Linux" then
+    elseif os_name == "Darwin" then
+      tsserver = "ts_ls"
+    elseif os_name:find("Windows") then
+    end
+
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        "ts_ls",
+        tsserver,
         "html",
         "cssls",
         "tailwindcss",
