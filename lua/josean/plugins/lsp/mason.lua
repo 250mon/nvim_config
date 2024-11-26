@@ -28,18 +28,20 @@ return {
     -- Detect the operating system
     local uname = vim.loop.os_uname()
     local os_name = uname.sysname
-    local tsserver = "tsserver"
+    local typescript_server = "tsserver"
 
     if os_name == "Linux" then
+      typescript_server = "ts_ls"
     elseif os_name == "Darwin" then
-      tsserver = "ts_ls"
+      typescript_server = "ts_ls"
     elseif os_name:find("Windows") then
+      typescript_server = "tsserver"
     end
 
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        tsserver,
+        typescript_server,
         "html",
         "cssls",
         "tailwindcss",
